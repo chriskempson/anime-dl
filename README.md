@@ -17,9 +17,13 @@ Clone this repo to a suitable directory and ensure the defined composer dependen
 ## Running
 Open `resources/chromedriver.exe`, open `resources/start-selenium.bat`, open a CLI and run `php animedl.php source-website.com` for a listing of all available media or `php animedl.php source-website.com "Media Name in Romaji"` to download media with Japanese and English (if available) subtitles.
 
-Seach a list of available media with grep:
+Run without any arguments to display all available sources:
 
-     php animedl.php animejpnsub.ezyro.com | grep Nihonjin
+     php animedl.php
+
+Search a list of available media with grep:
+
+     php animedl.php animejpnsub.ezyro.com | grep -i "nihonjin"
      
 Download a title with English and Japanese subtitles ready for [Voracious](https://github.com/rsimmons/voracious):
 
