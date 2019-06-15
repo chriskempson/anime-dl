@@ -28,3 +28,9 @@ Download a title with English and Japanese subtitles ready for [Voracious](https
 
 ## Sources
 - animejpnsub.ezyro.com
+
+## Todo
+- Add more sources (e.g. daiweeb.org/terakoya, animelon.com, anjsub.com)
+- Mac Support
+- Linux Support
+- Hide Chrome (prevent Chrome from popping up when downloading webpages)
