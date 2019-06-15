@@ -33,7 +33,8 @@ Download a title with English and Japanese subtitles ready for [Voracious](https
 
 ## Todo
 - Add more sources (e.g. daiweeb.org/terakoya, animelon.com, anjsub.com)
-- Mac Support
-- Linux Support
+- Make anime-dl start chrome driver and selenium if not already running
 - Hide Chrome (prevent Chrome from popping up when downloading webpages)
 - Rename project as 'anime-dl' doesn't really convey the project's intentions
+- Mac support
+- Linux support
