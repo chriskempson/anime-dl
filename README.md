@@ -36,3 +36,4 @@ Download a title with English and Japanese subtitles ready for [Voracious](https
 - Mac Support
 - Linux Support
 - Hide Chrome (prevent Chrome from popping up when downloading webpages)
+- Rename project as 'anime-dl' doesn't really convey the project's intentions
