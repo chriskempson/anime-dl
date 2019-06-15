@@ -1,10 +1,7 @@
 # anime-dl
-Personal project, unsupported and undocumented so don't ask for help! ：P
+Downloads Japanese media with Japanese and English subtitles for use with [Voracious](https://github.com/rsimmons/voracious). Hence, this tool is only of any use for those studying Japanese.
 
 ![screenshot](screenshot.jpg)
-
-## Description
-Downloads Japanese media with subtitles for use with [Voracious](https://github.com/rsimmons/voracious). Hence this tool is only useful for those studying Japanese.
 
 ## Requirements
 - Windows Subsystem for Linux with PHP and [Composer](https://getcomposer.org/) installed.
