@@ -1,6 +1,8 @@
 # Anime DL
 Downloads Japanese media (anime, films, drama) from free sources with Japanese and English subtitles for use with [Voracious](https://github.com/rsimmons/voracious). Hence, this tool is only of any use for those studying Japanese.
 
+**Note:** As I'm very busy studying Japanese any help adding support for additional sources or ticking off any of the TODO list items would be much appreciated!
+
 ![screenshot](screenshot.jpg)
 
 ## Requirements
