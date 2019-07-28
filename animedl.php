@@ -3,6 +3,8 @@ $source_name = strtolower(trim(@$argv[1])); // Source to download from
 $program_name = strtolower(trim(@$argv[2])); // Name of program you wish to download
 $custom_program_title = strtolower(trim(@$argv[3])); // Downloaded program files use this name if set
 
+define('DOWNLOAD_PATH', './downloads');
+
 ini_set('display_errors', 1);
 error_reporting(-1);
 
@@ -14,6 +16,8 @@ use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
 
 $sources[] = ['name' => 'animejpnsub.ezyro.com', 'url' => 'http://animejpnsub.ezyro.com'];
+// $sources[] = ['name' => 'anjsub.com', 'url' => 'https://anjsub.com'];
+// $sources[] = ['name' => 'animelon.com', 'url' => 'https://animelon.com'];
 // $sources[] = ['name' => 'daiweeb.org', 'url' => 'https://www.daiweeb.org/terakoya'];
 
 // Find an exact match in an array from a specified key
@@ -90,7 +94,7 @@ foreach ($video_links as $video_id => $video_link) {
             $episode_name = $video_id . ' ' . $episode_name;
         }
 
-        $file_name = 'downloads/' . $japanese_program_name . '/' .$episode_name;
+        $file_name = DOWNLOAD_PATH . '/' . $japanese_program_name . '/' .$episode_name;
 
         if ($key == 'subtitle_ja_url') {
             if (!file_exists($file_name . '.ja.vtt')) {
@@ -107,7 +111,7 @@ foreach ($video_links as $video_id => $video_link) {
 }
 
 // Save shell script, run it and then delete it
-$shell_script_path = 'downloads/' . $japanese_program_name . '/';
+$shell_script_path = DOWNLOAD_PATH . '/' . $japanese_program_name . '/';
 $shell_script_name = 'download-' . slug($english_program_name) . '-mp4.sh';
 write($shell_script_path . $shell_script_name, $shell_script);
 chdir($shell_script_path);
@@ -132,9 +136,13 @@ function get_program_list($source) {
             return parse_animejpnsub_ezyro_com($html);
             break;
 
-        case 'daiweeb.org':
-            return parse_daiweeb_org($html);
-            break;
+        // case 'anjsub.com':
+        //     return parse_anjsub_com($html);
+        //     break;
+
+        // case 'daiweeb.org':
+        //     return parse_daiweeb_org($html);
+        //     break;
         
         default:
             echo "Unable to process " . $source['name'] . "\n";
